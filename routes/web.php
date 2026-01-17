@@ -21,6 +21,7 @@ Route::middleware('auth')->group(function () {
         Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
 
         Route::resource('categories', App\Http\Controllers\Admin\CategoryController::class);
+        Route::resource('events', App\Http\Controllers\Admin\EventController::class);
     });
 });
 

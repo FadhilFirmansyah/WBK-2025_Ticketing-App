@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Order extends Model
 {
-    protected $guerded = ['id'];
+    protected $guarded = ['id'];
 
     protected $casts = [
         'order_date' => 'datetime',
@@ -26,6 +26,6 @@ class Order extends Model
     }
 
     public function tickets(){
-        return $this->belongsToMany(Ticket::class, 'detai_orders')->withPivot('amount', 'subtotal_price');
+        return $this->belongsToMany(Ticket::class, 'detail_orders')->withPivot('amount', 'subtotal_price');
     }
 }

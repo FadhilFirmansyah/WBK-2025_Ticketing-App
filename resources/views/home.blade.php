@@ -15,7 +15,7 @@
             <h2 class="text-2xl font-black uppercase italic">Event</h2>
             <div class="flex gap-2">
                 <a href="{{ route('home') }}">
-                    <x-user.category-pill :label="'Semua'" :active="!request('categories')" />
+                    <x-user.category-pill :label="'Semua'" :active="!request('category')" />
                 </a>
                 @foreach($categories as $category)
                 <a href="{{ route('home', ['category' => $category->id]) }}">

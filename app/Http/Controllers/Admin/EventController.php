@@ -62,7 +62,7 @@ class EventController extends Controller
     {
         $event = Event::findOrFail($id);
         $categories = Category::all();
-        $tickets = $event->tikets;
+        $tickets = $event->tickets;
 
         return view('pages.admin.event.show', compact('event', 'categories', 'tickets'));
     }

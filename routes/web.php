@@ -22,6 +22,7 @@ Route::middleware('auth')->group(function () {
 
         Route::resource('categories', App\Http\Controllers\Admin\CategoryController::class);
         Route::resource('events', App\Http\Controllers\Admin\EventController::class);
+        Route::resource('tickets', App\Http\Controllers\Admin\TicketController::class);
     });
 });
 

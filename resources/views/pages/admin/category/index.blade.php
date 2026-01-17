@@ -131,7 +131,7 @@
 
             delete_modal.showModal();
         }
-</script>
+    </script>
 
 
 </x-layouts.admin>

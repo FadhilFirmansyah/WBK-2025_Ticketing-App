@@ -19,6 +19,8 @@ Route::middleware('auth')->group(function () {
 
     Route::middleware('admin')->prefix('admin')->name('admin.')->group(function () {
         Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
+
+        Route::resource('categories', App\Http\Controllers\Admin\CategoryController::class);
     });
 });
 

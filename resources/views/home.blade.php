@@ -15,11 +15,11 @@
             <h2 class="text-2xl font-black uppercase italic">Event</h2>
             <div class="flex gap-2">
                 <a href="{{ route('home') }}">
-                    <x-user.category-pill :label="'Semua'" :active="!request('kategori')" />
+                    <x-user.category-pill :label="'Semua'" :active="!request('categories')" />
                 </a>
-                @foreach($categories as $kategori)
-                <a href="{{ route('home', ['kategori' => $kategori->id]) }}">
-                    <x-user.category-pill :label="$kategori->nama" :active="request('kategori') == $kategori->id" />
+                @foreach($categories as $category)
+                <a href="{{ route('home', ['category' => $category->id]) }}">
+                    <x-user.category-pill :label="$category->name" :active="request('category') == $category->id" />
                 </a>
                 @endforeach
             </div>
@@ -27,8 +27,13 @@
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             @foreach($events as $event)
-            <x-user.event-card :title="$event->judul" :date="$event->tanggal_waktu" :location="$event->lokasi"
-                :price="$event->tikets_min_harga" :image="$event->gambar" />
+                <x-user.event-card 
+                    :title="$event->title" 
+                    :date="$event->date_time" 
+                    :location="$event->location"
+                    :price="$event->tickets_min_price"
+                    :image="$event->image" 
+                    :href="route('events.show', $event)" />
             @endforeach
         </div>
     </section>

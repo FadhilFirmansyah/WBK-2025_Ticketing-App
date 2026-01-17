@@ -5,6 +5,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [App\Http\Controllers\User\HomeController::class, 'index'])->name('home');
+Route::get('/events/{event}', [App\Http\Controllers\User\EventController::class, 'show'])->name('events.show');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

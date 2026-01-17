@@ -6,6 +6,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [App\Http\Controllers\User\HomeController::class, 'index'])->name('home');
 Route::get('/events/{event}', [App\Http\Controllers\User\EventController::class, 'show'])->name('events.show');
+Route::get('/orders', [App\Http\Controllers\User\OrderController::class, 'index'])->name('orders.index');
+Route::get('/orders/{order}', [App\Http\Controllers\User\OrderController::class, 'show'])->name('orders.show');
+Route::post('/orders', [App\Http\Controllers\User\OrderController::class, 'store'])->name('orders.store');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

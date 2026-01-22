@@ -1,7 +1,5 @@
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
-## About Web Bimbingan Karir 2025 (Ticketing App)
-
 ## About Ticketing App (Web Bimbingan Karir 2025)
 
 Ticketing App is a modern web application designed to simplify the process of discovering, booking, and managing event tickets for users and organizers. Built for the 2025 Bimbingan Karir program, this platform provides a seamless experience for:

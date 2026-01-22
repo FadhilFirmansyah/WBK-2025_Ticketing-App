@@ -34,13 +34,12 @@ Ticketing App is a modern web application designed to simplify the process of di
 1. Clone this repository
 2. Copy `.env.example` to be `.env`
 3. Set up your `.env` file and database
-4. Don't forget `php artisan key:generate`
-5. Symlink the storage of asset `php artisan storage:link`
-6. Installing dependencies vendor with `composer install`
+4. Installing dependencies vendor with `composer install`
+5. Don't forget `php artisan key:generate`
+6. Symlink the storage of asset `php artisan storage:link`
 7. Installing dependencies node_module with `npm install`
 8. Building the frontend module `npm run build`
-9. Migrate database with ORM using `php artisan migrate`
-10. Migration successfuly up, then run all seeder with `php artisan db:seed` 
+9. Migrate database with ORM & seeding all data using `php artisan migrate --seed`
 11. Running simultaneously (Frontend & Backend) local `composer run dev`
 12. Or running local with `npm run dev` & `php artisan serve`
 

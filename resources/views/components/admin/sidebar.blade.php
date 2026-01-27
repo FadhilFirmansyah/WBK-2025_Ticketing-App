@@ -29,6 +29,17 @@
                 </a>
             </li>
 
+            <!-- Ticket type item -->
+            <li class="{{ request()->routeIs('admin.ticket-types.*') ? 'bg-gray-200 rounded-lg' : '' }}">
+                <a href="{{ route('admin.ticket-types.index') }}" class="is-drawer-close:tooltip is-drawer-close:tooltip-right" data-tip="Tipe Ticket">
+                    <!-- icon Kategori -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M4 9V7a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v2M9 16h6m-7 4h8a2 2 0 0 0 2-2v-7a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2z"/>
+                    </svg>
+                    <span class="is-drawer-close:hidden">Tipe Tiket</span>
+                </a>
+            </li>
+
             <!-- Event item -->
             <li class="{{ request()->routeIs('admin.events.*') ? 'bg-gray-200 rounded-lg' : '' }}">
                 <a href="{{ route('admin.events.index') }}" class="is-drawer-close:tooltip is-drawer-close:tooltip-right" data-tip="Event">

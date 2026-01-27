@@ -25,6 +25,7 @@ Route::middleware('auth')->group(function () {
         Route::resource('categories', App\Http\Controllers\Admin\CategoryController::class);
         Route::resource('events', App\Http\Controllers\Admin\EventController::class);
         Route::resource('tickets', App\Http\Controllers\Admin\TicketController::class);
+        Route::resource('ticket-types', App\Http\Controllers\TicketTypeController::class);
         
         Route::get('/histories', [App\Http\Controllers\Admin\HistoryController::class, 'index'])->name('histories.index');
         Route::get('/histories/{id}', [App\Http\Controllers\Admin\HistoryController::class, 'show'])->name('histories.show');

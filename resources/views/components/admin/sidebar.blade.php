@@ -40,6 +40,19 @@
                 </a>
             </li>
 
+            <!-- Payment type item -->
+            <li class="{{ request()->routeIs('admin.payment-types.*') ? 'bg-gray-200 rounded-lg' : '' }}">
+                <a href="{{ route('admin.payment-types.index') }}" class="is-drawer-close:tooltip is-drawer-close:tooltip-right" data-tip="Tipe Ticket">
+                    <!-- icon Kategori -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <rect x="2" y="7" width="20" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="2"/>
+                        <line x1="6" y1="15" x2="6.01" y2="15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        <line x1="10" y1="15" x2="14" y2="15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    <span class="is-drawer-close:hidden">Tipe Pembayatan</span>
+                </a>
+            </li>
+
             <!-- Event item -->
             <li class="{{ request()->routeIs('admin.events.*') ? 'bg-gray-200 rounded-lg' : '' }}">
                 <a href="{{ route('admin.events.index') }}" class="is-drawer-close:tooltip is-drawer-close:tooltip-right" data-tip="Event">

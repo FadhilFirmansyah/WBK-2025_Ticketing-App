@@ -26,7 +26,7 @@
                 <h1 class="text-3xl font-extrabold">{{ $event->title }}</h1>
                 <p class="text-sm text-gray-500 mt-1">
                   {{ \Carbon\Carbon::parse($event->date_time)->locale('id')->translatedFormat('d F Y, H:i') }} • 📍
-                  {{ $event->location }}
+                  {{ $event->location->location_name }}
                 </p>
 
                 <div class="mt-3 flex gap-2 items-center">

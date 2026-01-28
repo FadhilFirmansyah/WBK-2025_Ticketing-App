@@ -14,7 +14,7 @@
             src="{{ $order->event?->image ? asset('storage/images/events/' . $order->event->image) : 'https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp' }}"
             alt="{{ $order->event?->title ?? 'Event' }}" class="w-full object-cover mb-2" />
           <h2 class="font-semibold text-lg">{{ $order->event?->title ?? 'Event' }}</h2>
-          <p class="text-sm text-gray-500 mt-1">{{ $order->event?->location ?? '' }}</p>
+          <p class="text-sm text-gray-500 mt-1">{{ $order->event?->location->location_name ?? '' }}</p>
         </div>
         <div class="card-body lg:w-2/3">
 

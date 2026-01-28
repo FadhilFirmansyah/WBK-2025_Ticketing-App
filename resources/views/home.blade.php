@@ -30,7 +30,7 @@
                 <x-user.event-card 
                     :title="$event->title" 
                     :date="$event->date_time" 
-                    :location="$event->location"
+                    :location="$event->location->location_name"
                     :price="$event->tickets_min_price"
                     :image="$event->image" 
                     :href="route('events.show', $event)" />

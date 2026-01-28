@@ -18,6 +18,10 @@ class Event extends Model
         return $this->belongsTo(Category::class);
     }
 
+    public function location(){
+        return $this->belongsTo(Location::class);
+    }
+
     public function tickets(){
         return $this->hasMany(Ticket::class);
     }

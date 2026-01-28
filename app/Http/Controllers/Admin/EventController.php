@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Category;
 use App\Models\Event;
+use App\Models\Location;
 use Illuminate\Http\Request;
 
 class EventController extends Controller
@@ -24,7 +25,8 @@ class EventController extends Controller
     public function create()
     {
         $categories = Category::all();
-        return view('pages.admin.event.create', compact('categories'));
+        $locations = Location::all();
+        return view('pages.admin.event.create', compact('categories', 'locations'));
     }
 
     /**
@@ -36,7 +38,7 @@ class EventController extends Controller
             'title' => 'required|string|max:255',
             'description' => 'required|string',
             'date_time' => 'required|date',
-            'location' => 'required|string|max:255',
+            'location_id' => 'required|exists:locations,id',
             'category_id' => 'required|exists:categories,id',
             'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
@@ -62,9 +64,10 @@ class EventController extends Controller
     {
         $event = Event::findOrFail($id);
         $categories = Category::all();
+        $locations = Location::all();
         $tickets = $event->tickets;
 
-        return view('pages.admin.event.show', compact('event', 'categories', 'tickets'));
+        return view('pages.admin.event.show', compact('event', 'categories', 'tickets', 'locations'));
     }
 
     /**
@@ -74,7 +77,8 @@ class EventController extends Controller
     {
         $event = Event::findOrFail($id);
         $categories = Category::all();
-        return view('pages.admin.event.edit', compact('event', 'categories'));
+        $locations = Location::all();
+        return view('pages.admin.event.edit', compact('event', 'categories', 'locations'));
     }
 
     /**
@@ -89,7 +93,7 @@ class EventController extends Controller
                 'title' => 'required|string|max:255',
                 'description' => 'required|string',
                 'date_time' => 'required|date',
-                'location' => 'required|string|max:255',
+                'location_id' => 'required|exists:locations,id',
                 'category_id' => 'required|exists:categories,id',
                 'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             ]);

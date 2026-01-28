@@ -32,7 +32,7 @@
             <!-- Ticket type item -->
             <li class="{{ request()->routeIs('admin.ticket-types.*') ? 'bg-gray-200 rounded-lg' : '' }}">
                 <a href="{{ route('admin.ticket-types.index') }}" class="is-drawer-close:tooltip is-drawer-close:tooltip-right" data-tip="Tipe Ticket">
-                    <!-- icon Kategori -->
+                    <!-- icon Tiket Type -->
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                         <path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M4 9V7a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v2M9 16h6m-7 4h8a2 2 0 0 0 2-2v-7a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2z"/>
                     </svg>
@@ -43,13 +43,25 @@
             <!-- Payment type item -->
             <li class="{{ request()->routeIs('admin.payment-types.*') ? 'bg-gray-200 rounded-lg' : '' }}">
                 <a href="{{ route('admin.payment-types.index') }}" class="is-drawer-close:tooltip is-drawer-close:tooltip-right" data-tip="Tipe Ticket">
-                    <!-- icon Kategori -->
+                    <!-- icon Payment Type -->
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                        <rect x="2" y="7" width="20" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="2"/>
-                        <line x1="6" y1="15" x2="6.01" y2="15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                        <line x1="10" y1="15" x2="14" y2="15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        <rect x="2" y="7" width="20" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="2" />
+                        <path d="M2 10h20" stroke="currentColor" stroke-width="2" />
+                        <circle cx="7" cy="14" r="1" fill="currentColor" />
+                        <circle cx="17" cy="14" r="1" fill="currentColor" />
                     </svg>
-                    <span class="is-drawer-close:hidden">Tipe Pembayatan</span>
+                    <span class="is-drawer-close:hidden">Tipe Pembayaran</span>
+                </a>
+            </li>
+
+            <!-- Management Location item -->
+            <li class="{{ request()->routeIs('admin.locations.*') ? 'bg-gray-200 rounded-lg' : '' }}">
+                <a href="{{ route('admin.locations.index') }}" class="is-drawer-close:tooltip is-drawer-close:tooltip-right" data-tip="Kategori">
+                    <!-- icon Location Type -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 21s-6-5.686-6-10A6 6 0 0 1 18 11c0 4.314-6 10-6 10zm0-7a3 3 0 1 0 0-6a3 3 0 0 0 0 6z"/>
+                    </svg>
+                    <span class="is-drawer-close:hidden">Manajemen Lokasi</span>
                 </a>
             </li>
 
